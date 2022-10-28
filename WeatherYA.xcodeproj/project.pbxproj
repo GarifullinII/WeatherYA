@@ -13,6 +13,7 @@
 		6EA2A642290B1E310027EE79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EA2A641290B1E310027EE79 /* Assets.xcassets */; };
 		6EA2A645290B1E310027EE79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA2A643290B1E310027EE79 /* LaunchScreen.storyboard */; };
 		6EA2A64D290B29170027EE79 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2A64C290B29170027EE79 /* ListTableViewController.swift */; };
+		6EA2A653290C13B00027EE79 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2A652290C13B00027EE79 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6EA2A644290B1E310027EE79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EA2A646290B1E310027EE79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EA2A64C290B29170027EE79 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		6EA2A652290C13B00027EE79 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		6EA2A637290B1E2F0027EE79 /* WeatherYA */ = {
 			isa = PBXGroup;
 			children = (
-				6EA2A638290B1E2F0027EE79 /* AppDelegate.swift */,
-				6EA2A63A290B1E2F0027EE79 /* SceneDelegate.swift */,
-				6EA2A63E290B1E2F0027EE79 /* Main.storyboard */,
-				6EA2A64C290B29170027EE79 /* ListTableViewController.swift */,
-				6EA2A641290B1E310027EE79 /* Assets.xcassets */,
-				6EA2A643290B1E310027EE79 /* LaunchScreen.storyboard */,
-				6EA2A646290B1E310027EE79 /* Info.plist */,
+				6EA2A64E290C10050027EE79 /* Model */,
+				6EA2A64F290C100C0027EE79 /* View */,
+				6EA2A650290C10250027EE79 /* Supporting files */,
+				6EA2A651290C117E0027EE79 /* Resources */,
 			);
 			path = WeatherYA;
+			sourceTree = "<group>";
+		};
+		6EA2A64E290C10050027EE79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6EA2A64F290C100C0027EE79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6EA2A64C290B29170027EE79 /* ListTableViewController.swift */,
+				6EA2A63E290B1E2F0027EE79 /* Main.storyboard */,
+				6EA2A643290B1E310027EE79 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6EA2A650290C10250027EE79 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				6EA2A638290B1E2F0027EE79 /* AppDelegate.swift */,
+				6EA2A63A290B1E2F0027EE79 /* SceneDelegate.swift */,
+				6EA2A652290C13B00027EE79 /* Constant.swift */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		6EA2A651290C117E0027EE79 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6EA2A641290B1E310027EE79 /* Assets.xcassets */,
+				6EA2A646290B1E310027EE79 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +176,7 @@
 				6EA2A64D290B29170027EE79 /* ListTableViewController.swift in Sources */,
 				6EA2A639290B1E2F0027EE79 /* AppDelegate.swift in Sources */,
 				6EA2A63B290B1E2F0027EE79 /* SceneDelegate.swift in Sources */,
+				6EA2A653290C13B00027EE79 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +327,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 38NM7VX6QJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WeatherYA/Info.plist;
+				INFOPLIST_FILE = WeatherYA/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +355,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 38NM7VX6QJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WeatherYA/Info.plist;
+				INFOPLIST_FILE = WeatherYA/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
