@@ -24,7 +24,7 @@ struct Fact: Codable {
     let temp: Int
     let icon: String
     let condition: String
-    let windSpeed: Int
+    let windSpeed: Double
     let pressureMm: Int
     
     enum CodingKeys: String, CodingKey {

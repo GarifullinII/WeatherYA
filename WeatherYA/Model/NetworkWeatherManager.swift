@@ -29,7 +29,11 @@ struct NetworkWeatherManager {
                 return
             }
 
-            print(String(data: data, encoding: .utf8)!)
+//            print(String(data: data, encoding: .utf8)!)
+            if let weather = self.parseJSON(withData: data) {
+                print(weather)
+//                completionHandler(weather)
+            }
         }
         
         task.resume()

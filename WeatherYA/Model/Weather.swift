@@ -15,7 +15,7 @@ struct Weather {
     var url: String
     var condition: String
     var pressureMm: Int
-    var windSpeed: Int
+    var windSpeed: Double
     var tempMin: Int = 0
     var tempMax: Int = 0
     
