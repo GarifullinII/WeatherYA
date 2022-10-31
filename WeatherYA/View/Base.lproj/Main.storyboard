@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eb4-tw-o7A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MUN-jg-iTG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List Table View Controller-->
+        <!--Weather-->
         <scene sceneID="DW0-Sa-XEU">
             <objects>
                 <tableViewController id="Eb4-tw-o7A" customClass="ListTableViewController" customModule="WeatherYA" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,21 +80,28 @@
                             <outlet property="delegate" destination="Eb4-tw-o7A" id="Mv0-8K-1y2"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Weather" id="WHw-y9-d53">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jUH-ph-t4E">
+                            <connections>
+                                <action selector="pressPlusButton:" destination="Eb4-tw-o7A" id="L6N-mT-lsk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGg-0u-BPe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-170" y="-145"/>
+            <point key="canvasLocation" x="739.13043478260875" y="-145.3125"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Weather city-->
         <scene sceneID="B7M-Mm-y2K">
             <objects>
                 <viewController id="gF9-Z9-nEF" customClass="DetailViewController" customModule="WeatherYA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ju-7O-th2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="1i9-BH-8lM">
-                                <rect key="frame" x="87" y="32" width="240" height="413"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="1i9-BH-8lM">
+                                <rect key="frame" x="87" y="120" width="240" height="443"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eys-Bf-bMa">
                                         <rect key="frame" x="14" y="0.0" width="212" height="29"/>
@@ -107,21 +114,23 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ug-lo-g8X">
-                                        <rect key="frame" x="0.0" y="83" width="240" height="180"/>
+                                        <rect key="frame" x="0.0" y="93" width="240" height="180"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="5Lm-fR-dgv"/>
                                             <constraint firstAttribute="width" constant="240" id="Kkm-kn-7hh"/>
                                             <constraint firstAttribute="height" constant="180" id="dn6-OE-Uyg"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="rRT-63-iXB"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nZ-8B-Fk5">
-                                        <rect key="frame" x="99" y="317" width="42.5" height="21.5"/>
+                                        <rect key="frame" x="99" y="337" width="42.5" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="UPP-dr-JW9">
-                                        <rect key="frame" x="94" y="392.5" width="52" height="20.5"/>
+                                        <rect key="frame" x="94" y="422.5" width="52" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-55" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ae1-y4-94n">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="20.5"/>
@@ -140,7 +149,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="141" translatesAutoresizingMaskIntoConstraints="NO" id="PSa-Bd-Lg2">
-                                <rect key="frame" x="16" y="501" width="382" height="147"/>
+                                <rect key="frame" x="16" y="627" width="382" height="147"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="HEB-9u-70K">
                                         <rect key="frame" x="0.0" y="0.0" width="151" height="147"/>
@@ -250,14 +259,13 @@
                         <viewLayoutGuide key="safeArea" id="Wb2-nD-g02"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Wb2-nD-g02" firstAttribute="trailing" secondItem="1i9-BH-8lM" secondAttribute="trailing" constant="87" id="2kZ-5V-ZaV"/>
-                            <constraint firstItem="1i9-BH-8lM" firstAttribute="leading" secondItem="Wb2-nD-g02" secondAttribute="leading" constant="87" id="AFR-m5-IEV"/>
-                            <constraint firstItem="PSa-Bd-Lg2" firstAttribute="centerX" secondItem="1i9-BH-8lM" secondAttribute="centerX" id="DFe-1J-qjP"/>
-                            <constraint firstItem="Wb2-nD-g02" firstAttribute="bottom" secondItem="PSa-Bd-Lg2" secondAttribute="bottom" constant="160" id="DS6-UP-E1F"/>
+                            <constraint firstItem="1i9-BH-8lM" firstAttribute="centerX" secondItem="2ju-7O-th2" secondAttribute="centerX" id="R1P-bB-Qxt"/>
+                            <constraint firstItem="PSa-Bd-Lg2" firstAttribute="top" secondItem="1i9-BH-8lM" secondAttribute="bottom" constant="64" id="VfT-qp-ouU"/>
                             <constraint firstItem="1i9-BH-8lM" firstAttribute="top" secondItem="Wb2-nD-g02" secondAttribute="top" constant="32" id="hV0-3Z-bYG"/>
+                            <constraint firstItem="1i9-BH-8lM" firstAttribute="centerX" secondItem="PSa-Bd-Lg2" secondAttribute="centerX" id="sTF-k8-nWX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="OQV-Qu-YjQ"/>
+                    <navigationItem key="navigationItem" title="Weather city" id="OQV-Qu-YjQ"/>
                     <connections>
                         <outlet property="conditionLabel" destination="4nZ-8B-Fk5" id="OtW-u4-jlr"/>
                         <outlet property="maxTempLabel" destination="azv-Jw-JuD" id="xZy-hh-mZC"/>
@@ -271,7 +279,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZ7-Ey-sRQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800.00000000000011" y="-145.3125"/>
+            <point key="canvasLocation" x="1710.144927536232" y="-145.3125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h9f-Ek-88X">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MUN-jg-iTG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vHh-hx-vTf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Eb4-tw-o7A" kind="relationship" relationship="rootViewController" id="sxu-Pa-ZLv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TIR-5j-0fS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-171.01449275362319" y="-145.3125"/>
         </scene>
     </scenes>
     <resources>
