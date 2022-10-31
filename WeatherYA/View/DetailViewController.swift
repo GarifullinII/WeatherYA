@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftSVG
 
 class DetailViewController: UIViewController {
 
@@ -29,6 +30,8 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refreshLabels()
     }
 
     // MARK: - Refresh labels
@@ -37,7 +40,16 @@ class DetailViewController: UIViewController {
         
         self.nameCityLabel.text = weatherModel?.name
         
-        self.conditionLabel.text = weatherModel?.conditionCode
+        let url = URL(string: "https://yastatic.net/weather/i/icons/funky/dark/\(weatherModel!.conditionCode).svg")
+        let weatherImage = UIView(SVGURL: url!) { (image) in
+            image.resizeToFit(self.viewCity.bounds)
+        }
+        
+        self.viewCity.addSubview(weatherImage)
+        
+        self.conditionLabel.text = weatherModel?.condition
+        
+        self.temperaturaCity.text = "\((weatherModel?.temperature)!)"
         
         self.pressureLabel.text = "\((weatherModel?.pressureMm)!)"
         
