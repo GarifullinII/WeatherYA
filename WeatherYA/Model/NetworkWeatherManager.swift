@@ -11,8 +11,8 @@ struct NetworkWeatherManager {
     
     // MARK: - Fetch
     
-    func fetchWeather() {
-        let urlString = "https://api.weather.yandex.ru/v2/forecast?lat=66.089534&lon=76.690928"
+    func fetchWeather(latitude: Double, longitude: Double, completionHandler: @escaping (Weather) -> Void) {
+        let urlString = "https://api.weather.yandex.ru/v2/forecast?lat=\(latitude)&lon=\(longitude)"
         
         // get url
         guard let url = URL(string: urlString) else { return }
@@ -31,8 +31,7 @@ struct NetworkWeatherManager {
 
 //            print(String(data: data, encoding: .utf8)!)
             if let weather = self.parseJSON(withData: data) {
-                print(weather)
-//                completionHandler(weather)
+                completionHandler(weather)
             }
         }
         

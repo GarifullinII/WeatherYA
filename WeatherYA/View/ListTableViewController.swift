@@ -9,13 +9,40 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
+    let emptyCity = Weather()
+    
+    var citiesArray = [Weather]()
+    let nameCitiesArray = ["Moscow", "New Urengoy", "Irkutsk", "Tomsk", "Kainsk", "Novosibirsk", "Ust-Kut", "Rybinsk", "Ufa", "Nizhnevartovsk"]
+    
     let networkWeatherManager = NetworkWeatherManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networkWeatherManager.fetchWeather()
-    }    
+        if citiesArray.isEmpty {
+            citiesArray = Array(repeating: emptyCity, count: nameCitiesArray.count)
+        }
+        
+        addCities()
+    }
+    
+    // MARK: - Add cities in array
+    
+    func addCities() {
+        getCityWeather(citiesArray: self.nameCitiesArray) { (index, weather ) in
+            
+            self.citiesArray[index] = weather
+            self.citiesArray[index].name = self.nameCitiesArray[index]
+            print(self.citiesArray)
+            
+//            let maxIndex = self.citiesArray.count
+//            for i in 0..<maxIndex {
+//                self.citiesArray[index] = weather
+//                self.citiesArray[index].name = self.nameCitiesArray[index]
+//                print(self.citiesArray)
+//            }
+        }
+    }
 
     // MARK: - Table view data source
 

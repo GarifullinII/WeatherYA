@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List Table View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="DW0-Sa-XEU">
             <objects>
-                <tableViewController id="Eb4-tw-o7A" customClass="ListTableViewController" customModule="WeatherYA" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Eb4-tw-o7A" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BKk-J4-dw8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HNx-U2-iEJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HNx-U2-iEJ" customClass="ListTableViewCell" customModule="WeatherYA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HNx-U2-iEJ" id="INR-Cc-Tzd">
@@ -67,6 +67,11 @@
                                         <constraint firstItem="tbw-rI-ym1" firstAttribute="centerX" secondItem="INR-Cc-Tzd" secondAttribute="centerX" id="w6Q-eo-tGE"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="conditionCityLabel" destination="tbw-rI-ym1" id="9br-Ae-iK7"/>
+                                    <outlet property="nameCityLabel" destination="vJC-gJ-X1V" id="SYO-JT-VHL"/>
+                                    <outlet property="tempCityLabel" destination="wFX-F5-xzw" id="Hap-Sx-gGv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
