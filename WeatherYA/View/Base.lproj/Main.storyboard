@@ -82,7 +82,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGg-0u-BPe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33.333333333333336" y="-145.3125"/>
+            <point key="canvasLocation" x="-55" y="-139"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="B7M-Mm-y2K">
@@ -258,6 +258,16 @@
                             <constraint firstItem="1i9-BH-8lM" firstAttribute="top" secondItem="Wb2-nD-g02" secondAttribute="top" constant="32" id="hV0-3Z-bYG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="conditionLabel" destination="4nZ-8B-Fk5" id="OtW-u4-jlr"/>
+                        <outlet property="maxTempLabel" destination="azv-Jw-JuD" id="xZy-hh-mZC"/>
+                        <outlet property="minTempLabel" destination="pfW-2F-8gU" id="g0N-gj-UrV"/>
+                        <outlet property="nameCityLabel" destination="eys-Bf-bMa" id="Gx1-36-09u"/>
+                        <outlet property="pressureLabel" destination="Yjt-5D-sYX" id="ien-zk-BBr"/>
+                        <outlet property="temperaturaCity" destination="Ae1-y4-94n" id="Dc9-sY-05Q"/>
+                        <outlet property="viewCity" destination="9Ug-lo-g8X" id="ZRY-mo-VS2"/>
+                        <outlet property="windSpeedLabel" destination="xUO-on-IbG" id="gkT-4L-YL4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZ7-Ey-sRQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
