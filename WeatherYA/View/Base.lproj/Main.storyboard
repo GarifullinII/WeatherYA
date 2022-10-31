@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--List Table View Controller-->
         <scene sceneID="DW0-Sa-XEU">
             <objects>
-                <tableViewController id="Eb4-tw-o7A" sceneMemberID="viewController">
+                <tableViewController id="Eb4-tw-o7A" customClass="ListTableViewController" customModule="WeatherYA" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BKk-J4-dw8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HNx-U2-iEJ" customClass="ListTableViewCell" customModule="WeatherYA" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="HNx-U2-iEJ" customClass="ListTableViewCell" customModule="WeatherYA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HNx-U2-iEJ" id="INR-Cc-Tzd">
@@ -25,15 +25,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJC-gJ-X1V">
-                                            <rect key="frame" x="36" y="11" width="43" height="20"/>
+                                            <rect key="frame" x="36" y="11" width="178" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbw-rI-ym1">
-                                            <rect key="frame" x="187" y="12" width="40" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YnH-Vj-rqO">
@@ -53,18 +47,24 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbw-rI-ym1">
+                                            <rect key="frame" x="246" y="12" width="40" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="vJC-gJ-X1V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="INR-Cc-Tzd" secondAttribute="leadingMargin" id="1BD-nn-FkZ"/>
                                         <constraint firstItem="tbw-rI-ym1" firstAttribute="top" secondItem="INR-Cc-Tzd" secondAttribute="topMargin" constant="1" id="4bg-CH-gX7"/>
+                                        <constraint firstItem="tbw-rI-ym1" firstAttribute="leading" secondItem="vJC-gJ-X1V" secondAttribute="trailing" constant="32" id="DMH-IQ-HUS"/>
                                         <constraint firstAttribute="bottom" secondItem="YnH-Vj-rqO" secondAttribute="bottom" id="Gn6-J0-dfa"/>
-                                        <constraint firstItem="tbw-rI-ym1" firstAttribute="leading" secondItem="vJC-gJ-X1V" secondAttribute="trailing" constant="108" id="Hkd-wX-4gN"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="tbw-rI-ym1" secondAttribute="bottom" constant="1" id="ISo-Gn-fNt"/>
                                         <constraint firstItem="YnH-Vj-rqO" firstAttribute="top" secondItem="INR-Cc-Tzd" secondAttribute="top" id="XOK-bA-XiR"/>
                                         <constraint firstItem="vJC-gJ-X1V" firstAttribute="top" secondItem="INR-Cc-Tzd" secondAttribute="topMargin" id="ed8-25-EFX"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="vJC-gJ-X1V" secondAttribute="bottom" id="hQ7-zp-h1N"/>
                                         <constraint firstAttribute="trailing" secondItem="YnH-Vj-rqO" secondAttribute="trailing" constant="16" id="nzG-37-gpB"/>
-                                        <constraint firstItem="tbw-rI-ym1" firstAttribute="centerX" secondItem="INR-Cc-Tzd" secondAttribute="centerX" id="w6Q-eo-tGE"/>
+                                        <constraint firstItem="tbw-rI-ym1" firstAttribute="centerX" secondItem="INR-Cc-Tzd" secondAttribute="centerX" constant="59" id="w6Q-eo-tGE"/>
+                                        <constraint firstItem="vJC-gJ-X1V" firstAttribute="leading" secondItem="INR-Cc-Tzd" secondAttribute="leadingMargin" constant="16" id="zSQ-qv-rJQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -82,12 +82,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGg-0u-BPe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34" y="-145"/>
+            <point key="canvasLocation" x="33.333333333333336" y="-145.3125"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="B7M-Mm-y2K">
             <objects>
-                <viewController id="gF9-Z9-nEF" sceneMemberID="viewController">
+                <viewController id="gF9-Z9-nEF" customClass="DetailViewController" customModule="WeatherYA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ju-7O-th2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

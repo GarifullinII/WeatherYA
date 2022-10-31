@@ -19,6 +19,7 @@
 		6EA2A659290C1CDC0027EE79 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2A658290C1CDC0027EE79 /* Weather.swift */; };
 		6EA2A65B290EF25F0027EE79 /* GetCitiesWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2A65A290EF25F0027EE79 /* GetCitiesWeather.swift */; };
 		6EA2A65D290FEC680027EE79 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2A65C290FEC680027EE79 /* ListTableViewCell.swift */; };
+		6EA2A65F290FFB1F0027EE79 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2A65E290FFB1F0027EE79 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		6EA2A658290C1CDC0027EE79 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		6EA2A65A290EF25F0027EE79 /* GetCitiesWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCitiesWeather.swift; sourceTree = "<group>"; };
 		6EA2A65C290FEC680027EE79 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		6EA2A65E290FFB1F0027EE79 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				6EA2A64C290B29170027EE79 /* ListTableViewController.swift */,
+				6EA2A65E290FFB1F0027EE79 /* DetailViewController.swift */,
 				6EA2A63E290B1E2F0027EE79 /* Main.storyboard */,
 				6EA2A643290B1E310027EE79 /* LaunchScreen.storyboard */,
 			);
@@ -195,6 +198,7 @@
 				6EA2A63B290B1E2F0027EE79 /* SceneDelegate.swift in Sources */,
 				6EA2A65D290FEC680027EE79 /* ListTableViewCell.swift in Sources */,
 				6EA2A657290C15EE0027EE79 /* WeatherData.swift in Sources */,
+				6EA2A65F290FFB1F0027EE79 /* DetailViewController.swift in Sources */,
 				6EA2A653290C13B00027EE79 /* Constant.swift in Sources */,
 				6EA2A659290C1CDC0027EE79 /* Weather.swift in Sources */,
 			);

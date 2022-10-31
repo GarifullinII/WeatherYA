@@ -15,4 +15,13 @@ class ListTableViewCell: UITableViewCell {
     
     @IBOutlet var tempCityLabel: UILabel!
     
+    // MARK: - Fill IBOutlet
+    
+    func configure(weather: Weather) {
+        self.nameCityLabel.text = weather.name
+        self.conditionCityLabel.text = weather.condition
+        self.tempCityLabel.text = weather.temperatureString
+    }
+    
+    
 }
